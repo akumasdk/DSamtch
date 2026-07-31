@@ -24,11 +24,11 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.akumasdk.dsamtch"
+        applicationId = "com.flxrs.dankchat"
         minSdk = 30
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 41000
+        versionName = "4.1.0-DSamtch"
     }
 
     androidResources { generateLocaleConfig = true }
@@ -37,7 +37,7 @@ android {
     val localProperties = gradleLocalProperties(rootDir, providers)
     signingConfigs {
         create("release") {
-            storeFile = file("keystore/DSamtch.jks").takeIf { it.exists() } ?: File(System.getProperty("user.home") + "/dankchat/DSamtch.jks")
+            storeFile = file("keystore/DankChat.jks").takeIf { it.exists() } ?: File(System.getProperty("user.home") + "/dankchat/DankChat.jks")
             storePassword = localProperties.getProperty("SIGNING_STORE_PASSWORD") ?: System.getenv("SIGNING_STORE_PASSWORD")
             keyAlias = localProperties.getProperty("SIGNING_KEY_ALIAS") ?: System.getenv("SIGNING_KEY_ALIAS")
             keyPassword = localProperties.getProperty("SIGNING_KEY_PASSWORD") ?: System.getenv("SIGNING_KEY_PASSWORD")
@@ -94,7 +94,7 @@ android {
     }
 
     androidComponents.onVariants { variant ->
-        val renameTask = tasks.register<RenameApkTask>("renameApk${variant.name.replaceFirstChar { it.uppercase() }}") { apkName.set("DSamtch-${variant.name}.apk") }
+        val renameTask = tasks.register<RenameApkTask>("renameApk${variant.name.replaceFirstChar { it.uppercase() }}") { apkName.set("DankChat-${variant.name}.apk") }
         val transformationRequest =
             variant.artifacts
                 .use(renameTask)

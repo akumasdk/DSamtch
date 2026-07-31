@@ -28,7 +28,7 @@ jobs:
         id: decode_keystore
         uses: timheuer/base64-to-file@v2.0
         with:
-          fileName: '/app/keystore/DSamtch.jks'
+          fileName: '/app/keystore/DankChat.jks'
           fileDir: ${{ github.workspace }}
           encodedString: ${{ secrets.SIGNING_KEY }}
 
@@ -37,9 +37,8 @@ jobs:
         run: |
           base=$(grep 'versionName' app/build.gradle.kts | head -1 | sed 's/.*"\(.*\)".*/\1/')
           short_sha="${GITHUB_SHA::7}"
-          tag="release-v${base}-${short_sha}"
-          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
-          echo "name=Release v${base} (${short_sha})" >> "$GITHUB_OUTPUT"
+          echo "tag=adblock-release" >> "$GITHUB_OUTPUT"
+          echo "name=Adblock Fork Release v${base}" >> "$GITHUB_OUTPUT"
           echo "version=${base}" >> "$GITHUB_OUTPUT"
           echo "short_sha=${short_sha}" >> "$GITHUB_OUTPUT"
 
@@ -51,13 +50,13 @@ jobs:
           SIGNING_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
 
       - name: Rename release apk
-        run: mv ${{ github.workspace }}/app/build/outputs/apk/release/DSamtch-release.apk ${{ github.workspace }}/app/build/outputs/apk/release/DSamtch-${{ steps.version.outputs.version }}.apk
+        run: mv ${{ github.workspace }}/app/build/outputs/apk/release/DankChat-release.apk ${{ github.workspace }}/app/build/outputs/apk/release/DankChat-${{ steps.version.outputs.version }}.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v7
         with:
           name: Signed release apk
-          path: ${{ github.workspace }}/app/build/outputs/apk/release/DSamtch-${{ steps.version.outputs.version }}.apk
+          path: ${{ github.workspace }}/app/build/outputs/apk/release/DankChat-${{ steps.version.outputs.version }}.apk
 
       - name: Update rolling release
         env:
@@ -68,27 +67,23 @@ jobs:
           SHORT_SHA: ${{ steps.version.outputs.short_sha }}
           REPO: ${{ github.repository }}
         run: |
-          apk="${{ github.workspace }}/app/build/outputs/apk/release/DSamtch-${VERSION}.apk"
+          apk="${{ github.workspace }}/app/build/outputs/apk/release/DankChat-${VERSION}.apk"
 
-          if ! git ls-remote --exit-code --tags origin "$TAG" >/dev/null 2>&1; then
-            git tag "$TAG"
-            git push origin "$TAG"
+          # Delete existing release for the rolling tag if it exists
+          release_id=$(gh api "repos/$REPO/releases/tags/$TAG" --jq '.id' 2>/dev/null || echo "")
+          if [ -n "$release_id" ]; then
+            echo "Deleting existing release $release_id"
+            gh api -X DELETE "repos/$REPO/releases/$release_id"
           fi
 
-          release_id=$(gh api "repos/$REPO/releases" \
-            --jq '.[] | select(.name | startswith("Release")) | .id' | head -1)
+          # Force update the tag to current commit
+          git tag -f "$TAG"
+          git push origin "$TAG" --force
 
           notes="**Version:** \`v${VERSION}\`
-          **Commit:** [\`${SHORT_SHA}\`](https://github.com/${REPO}/commit/${GITHUB_SHA})"
-
-          # GitHub displays the original publish date, so the release is recreated on every build
-          if [ -n "$release_id" ]; then
-            old_tag=$(gh api "repos/$REPO/releases/$release_id" --jq '.tag_name')
-            gh api -X DELETE "repos/$REPO/releases/$release_id"
-            if [ "$old_tag" != "$TAG" ]; then
-              git push origin ":refs/tags/$old_tag" || true
-            fi
-          fi
+          **Commit:** [\`${SHORT_SHA}\`](https://github.com/${REPO}/commit/${GITHUB_SHA})
+          
+          This is a rolling release. The tag \`adblock-release\` always points to the latest build from the \`develop\` branch."
 
           gh release create "$TAG" "$apk" \
             --repo "$REPO" \
