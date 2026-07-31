@@ -9,6 +9,8 @@ jobs:
     name: Generate signed release apk
     runs-on: ubuntu-latest
     environment: release
+    permissions:
+      contents: write
     if: github.event_name == 'push' && github.ref == 'refs/heads/develop'
 
     steps:
