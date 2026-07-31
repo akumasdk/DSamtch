@@ -21,9 +21,14 @@ data class DankChatVersion(
 
         fun fromString(version: String): DankChatVersion? = version
             .split(".")
-            .mapNotNull(String::toIntOrNull)
-            .takeIf { it.size == 3 }
-            ?.let { (major, minor, patch) -> DankChatVersion(major, minor, patch) }
+            .takeIf { it.size >= 3 }
+            ?.let { parts ->
+                val major = parts[0].toIntOrNull() ?: return@let null
+                val minor = parts[1].toIntOrNull() ?: return@let null
+                val patchPart = parts[2].takeWhile { it.isDigit() }
+                val patch = patchPart.toIntOrNull() ?: return@let null
+                DankChatVersion(major, minor, patch)
+            }
 
         val LATEST_CHANGELOG = DankChatChangelog.entries.findLast { CURRENT >= it.version }
         val HAS_CHANGELOG = LATEST_CHANGELOG != null
