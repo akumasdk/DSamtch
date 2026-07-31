@@ -28,7 +28,7 @@ class StreamViewModel(
     application: Application,
     private val chatChannelProvider: ChatChannelProvider,
     private val streamDataRepository: StreamDataRepository,
-    private val streamsSettingsDataStore: StreamsSettingsDataStore,
+    internal val streamsSettingsDataStore: StreamsSettingsDataStore,
 ) : AndroidViewModel(application) {
     private val _currentStreamedChannel = MutableStateFlow<UserName?>(null)
 
@@ -42,14 +42,24 @@ class StreamViewModel(
             .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
 
     private val _isAudioOnly = MutableStateFlow(false)
+    private val _loadingStatus = MutableStateFlow("")
+    private val _adblockStatus = MutableStateFlow("")
 
     val streamState: StateFlow<StreamState> =
         combine(
             _currentStreamedChannel,
             hasStreamData,
             _isAudioOnly,
-        ) { currentStream, hasData, audioOnly ->
-            StreamState(currentStream = currentStream, hasStreamData = hasData, isAudioOnly = audioOnly)
+            _loadingStatus,
+            _adblockStatus,
+        ) { currentStream, hasData, audioOnly, loading, adblock ->
+            val message = adblock.ifBlank { loading }
+            StreamState(
+                currentStream = currentStream,
+                hasStreamData = hasData,
+                isAudioOnly = audioOnly,
+                adblockMessage = message
+            )
         }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), StreamState())
 
     val shouldEnablePipAutoMode: StateFlow<Boolean> =
@@ -99,6 +109,8 @@ class StreamViewModel(
     ) {
         if (channel == lastStreamedChannel) return
         lastStreamedChannel = channel
+        _loadingStatus.value = ""
+        _adblockStatus.value = ""
         loadStream(channel, webView)
     }
 
@@ -126,6 +138,8 @@ class StreamViewModel(
         }
         lastStreamedChannel = null
         hasWebViewBeenAttached = false
+        _loadingStatus.value = ""
+        _adblockStatus.value = ""
     }
 
     private fun loadStream(
@@ -141,6 +155,8 @@ class StreamViewModel(
     fun toggleStream(channel: UserName) {
         _currentStreamedChannel.update { if (it == channel) null else channel }
         _isAudioOnly.value = false
+        _loadingStatus.value = ""
+        _adblockStatus.value = ""
     }
 
     fun toggleAudioOnly() {
@@ -150,6 +166,21 @@ class StreamViewModel(
     fun closeStream() {
         _currentStreamedChannel.value = null
         _isAudioOnly.value = false
+        _loadingStatus.value = ""
+        _adblockStatus.value = ""
+    }
+
+    fun onAdblocked(text: String) {
+        _adblockStatus.value = text
+    }
+
+    fun onLoadingStatus(message: String) {
+        _loadingStatus.value = message
+    }
+
+    fun onPlaybackStarted() {
+        _loadingStatus.value = ""
+        _adblockStatus.value = ""
     }
 
     override fun onCleared() {
@@ -166,4 +197,5 @@ data class StreamState(
     val currentStream: UserName? = null,
     val hasStreamData: Boolean = false,
     val isAudioOnly: Boolean = false,
+    val adblockMessage: String = "",
 )
