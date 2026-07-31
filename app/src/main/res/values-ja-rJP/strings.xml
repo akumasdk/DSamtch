@@ -441,7 +441,7 @@
     <string name="preference_suggestion_mode_prefix_only">トリガー文字の後にのみ候補を表示</string>
     <string name="preference_about_header">このアプリについて</string>
     <string name="preference_appearance_header">外観</string>
-    <string name="preference_about_summary">DankChat %1$sは@flex3rsと複数のコントリビューターによって作成されました</string>
+    <string name="preference_about_summary">DankChat %1$sは@flex3rs, @akumasdkと複数のコントリビューターによって作成されました</string>
     <string name="preference_show_input_title">入力を表示</string>
     <string name="preference_show_input_summary">メッセージを送信するための入力フィールドを表示します</string>
     <string name="preference_follow_system_title">システムの既定値に設定</string>

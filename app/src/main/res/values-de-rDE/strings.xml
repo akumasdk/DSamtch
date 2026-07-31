@@ -454,7 +454,7 @@ Für Hilfe, siehe: https://wiki.chatterino.com/Image%20Uploader/</string>
     <string name="preference_suggestion_mode_prefix_only">Nur nach einem Auslösezeichen vorschlagen</string>
     <string name="preference_about_header">Über</string>
     <string name="preference_appearance_header">Aussehen</string>
-    <string name="preference_about_summary">DankChat %1$s wurde von @flex3rs und weiteren Mitwirkenden entwickelt</string>
+    <string name="preference_about_summary">DankChat %1$s wurde von @flex3rs, @akumasdk und weiteren Mitwirkenden entwickelt</string>
     <string name="preference_show_input_title">Eingabefeld anzeigen</string>
     <string name="preference_show_input_summary">Eingabefeld zum Senden von Nachrichten anzeigen</string>
     <string name="preference_follow_system_title">Systemstandard verwenden</string>

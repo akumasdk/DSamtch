@@ -47,7 +47,7 @@ import com.flxrs.dankchat.ui.theme.DankChatTheme
 import com.flxrs.dankchat.utils.compose.buildClickableAnnotation
 import com.flxrs.dankchat.utils.compose.buildLinkAnnotation
 
-private const val GITHUB_URL = "https://github.com/flex3r/dankchat"
+private const val GITHUB_URL = "https://github.com/akumasdk/DSamtch"
 private const val TWITCH_TOS_URL = "https://www.twitch.tv/p/terms-of-service"
 
 sealed interface SettingsNavigation {

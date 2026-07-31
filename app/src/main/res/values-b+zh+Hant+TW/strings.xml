@@ -447,7 +447,7 @@
     <string name="preference_suggestion_mode_prefix_only">僅在觸發字元後建議</string>
     <string name="preference_about_header">關於</string>
     <string name="preference_appearance_header">樣式</string>
-    <string name="preference_about_summary">DankChat %1$s 是由 @flex3rs 及其貢獻者所製</string>
+    <string name="preference_about_summary">DankChat %1$s 是由 @flex3rs, @akumasdk 及其貢獻者所製</string>
     <string name="preference_show_input_title">顯示訊息輸入</string>
     <string name="preference_show_input_summary">顯示訊息輸入方框以便傳送訊息</string>
     <string name="preference_follow_system_title">使用系統預設</string>

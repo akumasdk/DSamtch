@@ -454,7 +454,7 @@ Voit oppia lisää palvelusta ja poistaa viestihistorian käytöstä omalla kana
     <string name="preference_suggestion_mode_prefix_only">Ehdota vain laukaisumerkin jälkeen</string>
     <string name="preference_about_header">Tietoja</string>
     <string name="preference_appearance_header">Ulkoasu</string>
-    <string name="preference_about_summary">DankChat %1$s — kehittänyt @flex3rs ja avustajat</string>
+    <string name="preference_about_summary">DankChat %1$s — kehittänyt @flex3rs, @akumasdk ja avustajat</string>
     <string name="preference_show_input_title">Näytä syöttö</string>
     <string name="preference_show_input_summary">Näyttää syöttökentän viestien lähettämistä varten</string>
     <string name="preference_follow_system_title">Noudata järjestelmän oletusta</string>

@@ -447,7 +447,7 @@
     <string name="preference_suggestion_mode_prefix_only">Javaslat csak trigger karakter után</string>
     <string name="preference_about_header">Névjegy</string>
     <string name="preference_appearance_header">Kinézet</string>
-    <string name="preference_about_summary">DankChat %1$s készítette @flex3rs és a hozzájárulók</string>
+    <string name="preference_about_summary">DankChat %1$s készítette @flex3rs, @akumasdk és a hozzájárulók</string>
     <string name="preference_show_input_title">Bemenet mutatása</string>
     <string name="preference_show_input_summary">Megjeleníti a bemeneti területet az üzenetek küldésére</string>
     <string name="preference_follow_system_title">Rendszer alapértelmezett követése</string>

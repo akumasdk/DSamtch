@@ -394,7 +394,7 @@
     <string name="preference_suggestion_mode_prefix_only">କେବଳ ଟ୍ରିଗର ଅକ୍ଷର ପରେ ପ୍ରସ୍ତାବ କରନ୍ତୁ</string>
     <string name="preference_about_header">ଵିଷୟରେ</string>
     <string name="preference_appearance_header">ରୂପ</string>
-    <string name="preference_about_summary">DankChat  %1$s @ flex3rs ଏବଂ ସହଯୋଗୀମାନଙ୍କ ଦ୍ୱାରା ପ୍ରସ୍ତୁତ</string>
+    <string name="preference_about_summary">DankChat  %1$s @ flex3rs, @akumasdk ଏବଂ ସହଯୋଗୀମାନଙ୍କ ଦ୍ୱାରା ପ୍ରସ୍ତୁତ</string>
     <string name="preference_show_input_title">ଇନପୁଟ୍ ଦେଖାନ୍ତୁ</string>
     <string name="preference_show_input_summary">ବାର୍ତ୍ତା ପଠାଇବା ପାଇଁ ଇନପୁଟ୍ ଫିଲ୍ଡ ପ୍ରଦର୍ଶିତ କରେ</string>
     <string name="preference_follow_system_title">ସିଷ୍ଟମ୍ ଡିଫଲ୍ଟକୁ ଅନୁସରଣ କରିବା</string>

@@ -452,7 +452,7 @@ Le service stocke temporairement les messages pour les chaînes que vous (et les
     <string name="preference_suggestion_mode_prefix_only">Suggérer uniquement après un caractère déclencheur</string>
     <string name="preference_about_header">À propos</string>
     <string name="preference_appearance_header">Apparence</string>
-    <string name="preference_about_summary">DankChat %1$s créé par @flex3rs et d\'autres contributeurs</string>
+    <string name="preference_about_summary">DankChat %1$s créé par @flex3rs, @akumasdk et d\'autres contributeurs</string>
     <string name="preference_show_input_title">Afficher la boite d\'entrée</string>
     <string name="preference_show_input_summary">Affiche la boite pour envoyer des messages</string>
     <string name="preference_follow_system_title">Suivre le système par défaut</string>

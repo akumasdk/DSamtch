@@ -454,7 +454,7 @@ Mira esta guía para más ayuda: https://wiki.chatterino.com/Image%20Uploader/</
     <string name="preference_suggestion_mode_prefix_only">Solo sugerir después de un carácter activador</string>
     <string name="preference_about_header">Acerca de</string>
     <string name="preference_appearance_header">Apariencia</string>
-    <string name="preference_about_summary">DankChat %1$s creado por @flex3rs y contribuidores</string>
+    <string name="preference_about_summary">DankChat %1$s creado por @flex3rs, @akumasdk y contribuidores</string>
     <string name="preference_show_input_title">Mostrar entrada</string>
     <string name="preference_show_input_summary">Muestra el campo de entrada para enviar mensajes</string>
     <string name="preference_follow_system_title">Seguir opciones del sistema</string>

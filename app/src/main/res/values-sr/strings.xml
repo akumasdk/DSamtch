@@ -440,7 +440,7 @@ Pogledajte ovaj guide za pomoć https://wiki.chatterino.com/Image%20Uploader/</s
     <string name="preference_suggestion_mode_prefix_only">Предлажи само после тригер знака</string>
     <string name="preference_about_header">Dodatne informacije</string>
     <string name="preference_appearance_header">Izgled</string>
-    <string name="preference_about_summary">DankChat %1$s je napravljen od @flex3rs i saradnicima</string>
+    <string name="preference_about_summary">DankChat %1$s je napravljen od @flex3rs, @akumasdk i saradnicima</string>
     <string name="preference_show_input_title">Prikaži unos</string>
     <string name="preference_show_input_summary">Prikazuje polje za unos za slanje poruka</string>
     <string name="preference_follow_system_title">Sistem praćenja</string>

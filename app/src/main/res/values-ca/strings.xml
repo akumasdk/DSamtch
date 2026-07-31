@@ -451,7 +451,7 @@ Mira aquesta guia per a més ajuda: https://wiki.chatterino.com/Image%20Uploader
     <string name="preference_suggestion_mode_automatic">Suggereix coincidències mentre escrius</string>
     <string name="preference_suggestion_mode_prefix_only">Suggereix només després d\'un caràcter activador</string>
     <string name="preference_appearance_header">Aparença</string>
-    <string name="preference_about_summary">DankChat %1$s creat per @flex3rs i col·laboradors</string>
+    <string name="preference_about_summary">DankChat %1$s creat per @flex3rs, @akumasdk i col·laboradors</string>
     <string name="preference_show_input_title">Mostrar entrada</string>
     <string name="preference_show_input_summary">Mostra el camp d\'entrada per enviar missatges</string>
     <string name="preference_follow_system_title">Seguir sistema per defecte</string>

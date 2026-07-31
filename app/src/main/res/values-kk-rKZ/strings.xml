@@ -447,7 +447,7 @@
     <string name="preference_suggestion_mode_prefix_only">Тек триггер таңбасынан кейін ұсыну</string>
     <string name="preference_about_header">Қолданба туралы</string>
     <string name="preference_appearance_header">Сыртқы көрінісі</string>
-    <string name="preference_about_summary">DankChat %1$s жылғы @flex3rs және салымшылар</string>
+    <string name="preference_about_summary">DankChat %1$s жылғы @flex3rs, @akumasdk және салымшылар</string>
     <string name="preference_show_input_title">Енгізуді көрсету</string>
     <string name="preference_show_input_summary">Хабарларды жіберу үшін енгізу өрісін көрсетеді</string>
     <string name="preference_follow_system_title">Жүйе әдепкісін қолдану</string>

@@ -470,7 +470,7 @@
     <string name="preference_suggestion_mode_prefix_only">Пропонувати лише після символу-тригера</string>
     <string name="preference_about_header">Про додаток</string>
     <string name="preference_appearance_header">Зовнішній вигляд</string>
-    <string name="preference_about_summary">DankChat %1$s зроблений @flex3rs та іншими учасниками</string>
+    <string name="preference_about_summary">DankChat %1$s зроблений @flex3rs, @akumasdk та іншими учасниками</string>
     <string name="preference_show_input_title">Показувати поле введення</string>
     <string name="preference_show_input_summary">Показувати поле для введення тексту повідомлень</string>
     <string name="preference_follow_system_title">За замовчуванням системи</string>

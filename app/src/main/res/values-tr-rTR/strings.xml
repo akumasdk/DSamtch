@@ -454,7 +454,7 @@ Yardım için bu kılavuza bakın: https://wiki.chatterino.com/Image%20Uploader/
     <string name="preference_suggestion_mode_prefix_only">Yalnızca tetikleyici karakterden sonra öner</string>
     <string name="preference_about_header">Hakkında</string>
     <string name="preference_appearance_header">Görünüm</string>
-    <string name="preference_about_summary">DankChat %1$s @flex3rs ve katılımcılar tarafından yapıldı</string>
+    <string name="preference_about_summary">DankChat %1$s @flex3rs, @akumasdk ve katılımcılar tarafından yapıldı</string>
     <string name="preference_show_input_title">Girdiyi göster</string>
     <string name="preference_show_input_summary">Mesaj göndermek için girdiyi gösterir</string>
     <string name="preference_follow_system_title">Sistem varsayılanını izle</string>

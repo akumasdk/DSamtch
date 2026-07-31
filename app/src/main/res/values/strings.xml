@@ -463,7 +463,7 @@
     <string name="preference_suggestion_mode_prefix_only">Only suggest after a trigger character</string>
     <string name="preference_about_header">About</string>
     <string name="preference_appearance_header">Appearance</string>
-    <string name="preference_about_summary">DankChat %1$s made by @flex3rs and contributors</string>
+    <string name="preference_about_summary">DankChat %1$s made by @flex3rs, @akumasdk and contributors</string>
     <string name="preference_show_input_key" translatable="false">show_input_key</string>
     <string name="preference_show_input_title">Show input</string>
     <string name="preference_show_input_summary">Displays the input field to send messages</string>

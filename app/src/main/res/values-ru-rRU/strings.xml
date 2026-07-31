@@ -468,7 +468,7 @@
     <string name="preference_suggestion_mode_prefix_only">Предлагать только после символа-триггера</string>
     <string name="preference_about_header">О программе</string>
     <string name="preference_appearance_header">Внешний вид</string>
-    <string name="preference_about_summary">DankChat %1$s создан @flex3rs и другими участниками</string>
+    <string name="preference_about_summary">DankChat %1$s создан @flex3rs, @akumasdk и другими участниками</string>
     <string name="preference_show_input_title">Отображать строку ввода</string>
     <string name="preference_show_input_summary">Отображать строку для ввода сообщений</string>
     <string name="preference_follow_system_title">В соответствии с системой</string>

@@ -206,7 +206,7 @@
     <string name="preference_general_header">عمومی</string>
     <string name="preference_about_header">درباره</string>
     <string name="preference_appearance_header">ظاهر</string>
-    <string name="preference_about_summary">DankChat %1$s ساخته شده توسط @flex3rs و مشارکت کنندگان</string>
+    <string name="preference_about_summary">DankChat %1$s ساخته شده توسط @flex3rs, @akumasdk و مشارکت کنندگان</string>
     <string name="preference_show_input_title">نمایش ورودی</string>
     <string name="preference_show_input_summary">فیلد ورودی برای ارسال پیام را نمایش می دهد</string>
     <string name="preference_follow_system_title">دنبال کردن پیش فرض سیستم</string>

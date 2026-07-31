@@ -463,7 +463,7 @@
     <string name="preference_suggestion_mode_prefix_only">Прапаноўваць толькі пасля сімвала-трыгера</string>
     <string name="preference_about_header">Пра праграму</string>
     <string name="preference_appearance_header">Выгляд</string>
-    <string name="preference_about_summary">DankChat %1$s створаны @flex3rs і іншымі ўдзельнікамі</string>
+    <string name="preference_about_summary">DankChat %1$s створаны @flex3rs, @akumasdk і іншымі ўдзельнікамі</string>
     <string name="preference_show_input_title">Адлюстроўваць радок уводу</string>
     <string name="preference_show_input_summary">Адлюстроўваць радок для ўводу паведамленняў</string>
     <string name="preference_follow_system_title">У адпаведнасці з сістэмай</string>

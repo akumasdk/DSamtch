@@ -468,7 +468,7 @@ Aby zapewnić tą usługę, wspomniany serwis tymczasowo przechowuje wiadomości
     <string name="preference_suggestion_mode_prefix_only">Sugeruj tylko po znaku wyzwalającym</string>
     <string name="preference_about_header">O aplikacji</string>
     <string name="preference_appearance_header">Wygląd</string>
-    <string name="preference_about_summary">DankChat %1$s stworzony przez @flex3rs i kontrybutorów</string>
+    <string name="preference_about_summary">DankChat %1$s stworzony przez @flex3rs, @akumasdk i kontrybutorów</string>
     <string name="preference_show_input_title">Pokazuj pole czatu</string>
     <string name="preference_show_input_summary">Pokazuje pole czatu do wysyłania wiadomości</string>
     <string name="preference_follow_system_title">Użyj ustawień systemu</string>

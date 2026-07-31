@@ -447,7 +447,7 @@
     <string name="preference_suggestion_mode_prefix_only">Suggerisci solo dopo un carattere di attivazione</string>
     <string name="preference_about_header">Info</string>
     <string name="preference_appearance_header">Aspetto</string>
-    <string name="preference_about_summary">DankChat %1$s, sviluppata da @flex3rs e collaboratori</string>
+    <string name="preference_about_summary">DankChat %1$s, sviluppata da @flex3rs, @akumasdk e collaboratori</string>
     <string name="preference_show_input_title">Mostra input</string>
     <string name="preference_show_input_summary">Mostra il campo di inserimento per inviare i messaggi</string>
     <string name="preference_follow_system_title">Segui il sistema predefinito</string>

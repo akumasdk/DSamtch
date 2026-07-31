@@ -470,7 +470,7 @@ Koukněte na tento návod pro pomoc: https://wiki.chatterino.com/Image%20Uploade
     <string name="preference_suggestion_mode_prefix_only">Navrhovat pouze po spouštěcím znaku</string>
     <string name="preference_about_header">O aplikaci</string>
     <string name="preference_appearance_header">Vzhled</string>
-    <string name="preference_about_summary">DankChat %1$s je vytvořen uživatelem @flex3rs a přispěvateli</string>
+    <string name="preference_about_summary">DankChat %1$s je vytvořen uživatelem @flex3rs, @akumasdk a přispěvateli</string>
     <string name="preference_show_input_title">Zobrazit vstup</string>
     <string name="preference_show_input_summary">Zobrazí vstupní pole pro odesílání zpráv</string>
     <string name="preference_follow_system_title">Stejný jako režim systému</string>
